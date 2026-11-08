@@ -1,52 +1,39 @@
 # Personal Expense & Budget Tracker
 
-## About the Project
+## About
 
-The Personal Expense & Budget Tracker is a console-based application developed in Java. The main purpose of this project is to manage daily income and expenses and keep track of a monthly budget.
-
-It allows users to record transactions, check their spending, generate monthly reports, and manage their financial records.
+Personal Expense & Budget Tracker is a Java console application for keeping track of income, expenses, and a monthly budget. It was made as a practice project to apply object-oriented programming, data structures, algorithms, and file handling in one program.
 
 ## Features
 
 - Add income and expenses
-- View all recorded transactions
-- Search transactions by title, category, or type
-- Sort transactions by amount
-- Generate monthly financial reports
-- View category-wise expense reports
+- View all saved transactions
+- Search by title, category, or transaction type
+- Display transactions sorted by amount
+- Create monthly income and expense reports
+- View expenses by category
 - Set a monthly budget
-- Receive budget usage alerts
-- Delete transactions
-- Undo the last added expense
-- Save and load records using local files
+- Get an alert after using 80% of the current month's budget or going over it
+- Delete a transaction by ID
+- Undo the most recently added expense during the current session
+- Save and load data from local files
 
-## Technologies Used
+## Concepts Used
 
-- Java
-- Object-Oriented Programming (OOP)
-- Data Structures and Algorithms (DSA)
-- File Handling
+- **Encapsulation:** Transaction fields are private and accessed through getter methods.
+- **Inheritance:** `Income` and `Expense` extend the `Transaction` class.
+- **Abstraction:** `Transaction` is an abstract class.
+- **Polymorphism:** `getType()` is implemented by the child classes.
 
-## OOP Concepts
+## Data Structures and Algorithms
 
-This project uses the following OOP concepts:
-
-- **Encapsulation:** Private fields and public getter methods.
-- **Inheritance:** Income and Expense classes inherit from Transaction.
-- **Abstraction:** Transaction is an abstract class.
-- **Polymorphism:** The `getType()` method is overridden in child classes.
-
-## Data Structures & Algorithms
-
-- **ArrayList:** Stores transaction records.
-- **Stack:** Supports undo functionality.
-- **HashMap:** Calculates category-wise expenses.
-- **Linear Search:** Finds matching transactions.
-- **Merge Sort:** Sorts transactions by amount.
+- `ArrayList` for storing transactions
+- `Stack` for the undo feature
+- `HashMap` for category-wise expense totals
+- Linear search for finding transactions
+- Merge sort for displaying transactions by amount
 
 ## Project Structure
-
-The repository also includes `.gitignore` to keep generated data and build artifacts out of version control.
 
 ```text
 Personal_Expense_Budget_Tracker/
@@ -59,19 +46,21 @@ Personal_Expense_Budget_Tracker/
 └── README.md
 ```
 
+## Requirements
+
+- Java JDK 8 or later
+
 ## How to Run
 
-**Requirements:** Java JDK 8 or newer.
-
-1. Download or clone this repository.
-2. Open the project folder in your terminal.
+1. Clone or download the repository.
+2. Open the project folder in a terminal.
 3. Compile the Java files:
 
    ```bash
    javac *.java
    ```
 
-4. Run the application:
+4. Start the program:
 
    ```bash
    java Main
@@ -79,9 +68,17 @@ Personal_Expense_Budget_Tracker/
 
 ## Data Storage
 
-The application saves transaction records in `transactions.csv` and the monthly budget in `budget.txt`. These files are created locally when data is saved.
+When the data is saved, the program creates two local files:
+
+- `transactions.csv` for income and expense records
+- `budget.txt` for the monthly budget
+
+These files are created in the same folder where the program is run. They are not included in the repository.
+
+## Notes
+
+The sorting option only displays a sorted copy of the transactions; it does not change their original order. The undo stack is kept in memory, so the undo option applies to expenses added during the current run of the program. After restarting the application, previously saved expenses cannot be undone.
 
 ## Purpose
 
-This project was developed as a practical learning project to understand Java programming, OOP principles, data structures, algorithms, and file handling.
-
+This is a learning project built while practising Java, OOP, data structures, algorithms, and file handling.
