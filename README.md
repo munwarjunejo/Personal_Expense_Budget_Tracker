@@ -85,6 +85,3 @@ The application saves transaction records in `transactions.csv` and the monthly 
 
 This project was developed as a practical learning project to understand Java programming, OOP principles, data structures, algorithms, and file handling.
 
-## Note
-
-This is an educational project. It is not connected to any real bank or online payment service.
