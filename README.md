@@ -67,15 +67,15 @@ Personal_Expense_Budget_Tracker/
 2. Open the project folder in your terminal.
 3. Compile the Java files:
 
-```bash
-javac *.java
-```
+   ```bash
+   javac *.java
+   ```
 
 4. Run the application:
 
-```bash
-java Main
-```
+   ```bash
+   java Main
+   ```
 
 ## Data Storage
 
